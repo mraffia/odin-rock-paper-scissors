@@ -6,15 +6,15 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return `draw`;
+        return 'draw';
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'scissors' && computerSelection === 'paper') ||
         (playerSelection === 'paper' && computerSelection === 'rock')
         ) {
-        return `player win`;
+        return 'player win';
     } else {
-        return `player lose`;
+        return 'player lose';
     }
 }
 
@@ -22,9 +22,9 @@ let playerScore = 0;
 let computerScore = 0;
 
 const selections = document.querySelectorAll('.selection');
+const score = document.querySelector('#score');
 const results = document.querySelector('#results');
 const rounds = document.querySelector('#rounds');
-const score = document.querySelector('#score');
 
 function displayRounds() {
     let playerSelection = this.id;
@@ -61,7 +61,9 @@ function evaluateScore() {
         } else {
             h4.textContent = 'Uh oh! The computer reached the 5 point mark first.';
         }     
+
         results.appendChild(h4);
+
         selections.forEach((selection) => {
             selection.disabled = true;
         })
@@ -72,6 +74,8 @@ selections.forEach((selection) => {
     selection.addEventListener('click', displayRounds);
 });
 
+// Function that runs the game 5 times, player uses prompt to play and score is diplayed via console
+//
 // function game() {
 //     let playerScore = 0;
 //     let computerScore = 0;
