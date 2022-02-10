@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Rock Paper Scissors</title>
+    <script src="./rps.js" defer></script>
 </head>
 <body>
-    <script src="./rps.js"></script>
+    <h1>
+        Odin Rock Paper Sciccors Mini Game
+    </h1>
+    <p>The one who gets to 5 points first wins!</p>
+    <div id="container">
+        <h3>Select your hand:</h3>
+        <button class="selection" id="rock">Rock</button>
+        <button class="selection" id="paper">Paper</button>
+        <button class="selection" id="scissors">Scissors</button>
+
+        <h3>Score: </h3>
+        <p id="score"></p>
+
+        <h3>Round results:</h3>
+        <div id="results"> 
+            <ol id="rounds">
+
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
